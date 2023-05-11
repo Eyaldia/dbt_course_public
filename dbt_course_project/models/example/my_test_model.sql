@@ -1,6 +1,9 @@
 -- my_test_model.sql
 
-{{ dbt_utils.run_python_script("macros.my_test_script.perform_test") }}
+{{ run_operation(
+    python_callable="macros.my_test_script.perform_test",
+    arguments={}
+) }}
 {% set test_result = return %}
 
 {% if not test_result %}
