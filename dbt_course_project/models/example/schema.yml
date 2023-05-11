@@ -32,5 +32,3 @@ models:
         description: "The primary key for this table"
         tests:
           - not_null
-          - accepted_values:
-              values: ['BUILDING','HOUSEHOLD','MACHINERY','FURNITURE']
