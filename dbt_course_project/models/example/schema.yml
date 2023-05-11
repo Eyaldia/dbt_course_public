@@ -1,0 +1,36 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: snowflake_cusomer_info
+    description: "query customers"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: C_MKTSEGMENT
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['BUILDING','HOUSEHOLD','MACHINERY','FURNITURE']

@@ -1,0 +1,13 @@
+dbt_course_project:
+  outputs:
+    dev:
+      account: dw24986.europe-west2.gcp
+      database: PSHITA
+      password: Sales123
+      role: sysadmin
+      schema: APP
+      threads: 1
+      type: snowflake
+      user: ediamant
+      warehouse: INGESTION_WH
+  target: dev

@@ -1,0 +1,49 @@
+[0m00:12:29.901794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa1ab8760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa2fe8b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa2fe8ac0>]}
+
+
+============================== 00:12:29.905365 | 9d782e28-0b36-4922-a02f-0f049fe338c1 ==============================
+[0m00:12:29.905365 [info ] [MainThread]: Running with dbt=1.5.0
+[0m00:12:29.905815 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/eyaldiamant/Desktop/dbt_course/dbt_course_public/', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m00:12:29.906513 [error] [MainThread]: Encountered an error:
+1
+[0m00:12:29.907149 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/eyaldiamant/opt/anaconda3/lib/python3.9/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/eyaldiamant/opt/anaconda3/lib/python3.9/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/eyaldiamant/opt/anaconda3/lib/python3.9/site-packages/dbt/cli/main.py", line 459, in init
+    results = task.run()
+  File "/Users/eyaldiamant/opt/anaconda3/lib/python3.9/site-packages/dbt/task/init.py", line 285, in run
+    sys.exit(1)
+SystemExit: 1
+
+[0m00:12:29.907853 [debug] [MainThread]: Command `dbt init` failed at 00:12:29.907565 after 0.03 seconds
+[0m00:12:29.908091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa1ab8760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa300fa60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9aa300fbb0>]}
+[0m00:12:29.908323 [debug] [MainThread]: Flushing usage events
+[0m00:16:01.424371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe409aab700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe40aa78d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe40aa78ca0>]}
+
+
+============================== 00:16:01.427834 | 63e6902d-9dde-43e0-b466-f75d02881f95 ==============================
+[0m00:16:01.427834 [info ] [MainThread]: Running with dbt=1.5.0
+[0m00:16:01.428291 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/eyaldiamant/Desktop/dbt_course/dbt_course_public/', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m00:16:26.055036 [debug] [MainThread]: Starter project path: /Users/eyaldiamant/opt/anaconda3/lib/python3.9/site-packages/dbt/include/starter_project
+[0m00:18:51.197368 [info ] [MainThread]: Profile dbt_course_project written to /Users/eyaldiamant/Desktop/dbt_course/dbt_course_public/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:18:51.198680 [info ] [MainThread]: 
+Your new dbt project "dbt_course_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:18:51.200125 [debug] [MainThread]: Command `dbt init` succeeded at 00:18:51.199530 after 169.80 seconds
+[0m00:18:51.200754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe409aab700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe40b9f8070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe409cf1700>]}
+[0m00:18:51.201444 [debug] [MainThread]: Flushing usage events
