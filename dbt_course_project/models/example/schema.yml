@@ -20,8 +20,10 @@ models:
           - unique
           - not_null
 
+  - name:  my_test_model  
+
   - name: snowflake_cusomer_info
-    description: "query customers"
+    description: "query customers666"
     columns:
       - name: C_CUSTKEY
         description: "The primary key for this table"
@@ -32,3 +34,4 @@ models:
         description: "The primary key for this table"
         tests:
           - not_null
+
