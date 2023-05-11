@@ -1,3 +1,0 @@
-packages:
-  - package: fishtown-analytics/dbt-adhoc
-    version: 0.2.0  # Replace with the desired version
