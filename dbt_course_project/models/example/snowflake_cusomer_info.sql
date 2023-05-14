@@ -5,7 +5,7 @@ select C_CUSTKEY
       , C_MKTSEGMENT
       , COUNT(o.*)			order_count
       , Sum(Nvl(O.O_TOTALPRICE,0))	total_order	
-from  "MAIN_DB"."MAIN"."CUSTOMER_T" C
+from  "MAIN_DB"."MAIN"."CUSTOMERS_T" C
       left outer join 
       "MAIN_DB"."MAIN"."ORDERS_T" O
       on c.C_CUSTKEY = o.O_CUSTKEY
