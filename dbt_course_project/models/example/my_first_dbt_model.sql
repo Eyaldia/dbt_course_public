@@ -7,16 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
-
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
-
-)
+{{ config(materialized='table',alias='CUSTOMERS_T',DATABASE='MAIN_DB',SCHEMA='MAIN') }}
 
 select *
-from source_data
-where id is not null
+from "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" 
