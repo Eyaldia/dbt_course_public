@@ -1,13 +1,13 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table',alias='YOTPO_BOOKING_T',DATABASE='MAIN_DB',SCHEMA='MAIN') }}
 
 select C_CUSTKEY
       , C_NAME
       , C_MKTSEGMENT
       , COUNT(o.*)			order_count
       , Sum(Nvl(O.O_TOTALPRICE,0))	total_order	
-from  "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" C
+from  "MAIN_DB"."MAIN"."CUSTOMER_T" C
       left outer join 
-      "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."ORDERS" O
+      "MAIN_DB"."MAIN"."ORDERS_T" O
       on c.C_CUSTKEY = o.O_CUSTKEY
 group by 1,2,3
 order by 4
