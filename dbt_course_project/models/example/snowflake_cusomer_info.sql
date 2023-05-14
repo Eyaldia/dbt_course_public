@@ -5,9 +5,9 @@ select C_CUSTKEY
       , C_MKTSEGMENT
       , COUNT(o.*)			order_count
       , Sum(Nvl(O.O_TOTALPRICE,0))	total_order	
-from  "MAIN_DB"."MAIN"."CUSTOMERS_T" C
+from  {{ref('my_first_dbt_model')}} C
       left outer join 
-      "MAIN_DB"."MAIN"."ORDERS_T" O
+      {{ref('my_second_dbt_model')}} O
       on c.C_CUSTKEY = o.O_CUSTKEY
 group by 1,2,3
 order by 4
