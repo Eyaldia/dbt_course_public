@@ -32,4 +32,5 @@ models:
         description: "The primary key for this table"
         tests:
           - not_null
+          - nvlai_get_asset_state
 
