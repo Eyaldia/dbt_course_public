@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: my_first_dbt_model
-    description: "A starter dbt model"
+    description: "A starter dbt model change "
     columns:
       - name: C_CUSTKEY
         description: "The primary key for this table"
@@ -32,4 +32,5 @@ models:
         description: "The primary key for this table"
         tests:
           - not_null
+          - nvlai_get_asste_state
 
